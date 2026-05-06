@@ -1,0 +1,10 @@
+{
+  "id": "ringi-bridge",
+  "name": "Ringi Bridge",
+  "description": "Bridges 9 ringi-approval custom tools to the Railway-A internal HTTP server over Bearer auth.",
+  "configSchema": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {}
+  }
+}
