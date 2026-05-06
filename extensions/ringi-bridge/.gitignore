@@ -1,0 +1,10 @@
+node_modules
+dist
+*.log
+.env
+.env.local
+
+# 型チェック用の一時ローカル npm 環境（Read-only sandbox では openclaw monorepo を
+# まるごと workspace として用意できないため、ここに TypeScript だけを入れて
+# `tsc --noEmit` を回している。コミット対象外。）
+typecheck-env/

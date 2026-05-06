@@ -25,6 +25,9 @@ WORKDIR /openclaw
 ARG OPENCLAW_GIT_REF=v2026.3.8
 RUN git clone --depth 1 --branch "${OPENCLAW_GIT_REF}" https://github.com/openclaw/openclaw.git .
 
+# Inject our custom extension into the OpenClaw monorepo before pnpm install
+COPY extensions/ringi-bridge /openclaw/extensions/ringi-bridge
+
 # Patch: relax version requirements for packages that may reference unpublished versions.
 # Apply to all extension package.json files to handle workspace protocol (workspace:*).
 RUN set -eux; \
