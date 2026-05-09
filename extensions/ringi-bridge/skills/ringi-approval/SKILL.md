@@ -1,6 +1,7 @@
 ---
 name: ringi-approval
-description: 【金額】を含む稟議申請を Slack で受け取った際、ringi-bridge ツール群（parse_application / judge_application 等）を必ず呼び出して既存ルールエンジンに判定させる。Claude は判定を自前推論せず、ツールの返り値だけを信用する。
+description: 稟議申請（【金額】等のラベル）処理。必ず ringi-bridge の 9 ツールで判定する。
+metadata: { "openclaw": { "always": true } }
 ---
 
 # 稟議承認 — 必ずツールを呼ぶこと
