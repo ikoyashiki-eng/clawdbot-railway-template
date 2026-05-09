@@ -19,7 +19,7 @@ export function createCheckFormatTool(): AnyAgentTool {
     name: "check_format",
     label: "Check Format",
     description:
-      "テキストが申請フォーマット（【金額】を含む）かどうかを判定する軽量チェック。",
+      "投稿テキストが稟議申請のフォーマット（必須ラベル・最小行数）を満たすかを軽量チェック。判定フロー（parse_application → judge_application）を実行する前段で、不完全な投稿を早期フィルタするために必ず使う。Claude が目視で『これは申請っぽい』と判断する代わりにこのツールで判定する。",
     parameters: Schema,
     async execute(_toolCallId, params) {
       const result = await postToRailwayA("/tools/check_format", params);
